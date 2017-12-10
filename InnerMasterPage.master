@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="InnerMasterPage.master.cs"
+    Inherits="InnerMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Sales</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/etalage.css" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="css/jquery.min.js" type="text/javascript"></script>
+    <script src="css/bootstrap.min.js" type="text/javascript"></script>
+    <link href="asome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Dropdown Hover CSS -->
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/customstyles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.etalage.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function SearchFunction() {
+            document.getElementById("Button1").click();
+        }
+
+
+        function UserloginFunction() {
+
+            //alert("UserloginFunction calling");
+        }
+        function getRedirect() {
+            window.location.href = "CartProductDetailspage.aspx";   
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Services>
+            <asp:ServiceReference Path="~/WebService.asmx" />
+        </Services>
+    </asp:ScriptManager>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-12" style="background-color: #FFFFFF;">
+                <div class="col-md-1">
+                    
+                    
+                </div>
+                <div class="col-md-5" style="padding-top:1%;">
+                <span style="color:Maroon;font-size:20px;">
+                    NATURAL GEMS</span><br />
+                    <span style="color:Maroon;font-size:16px;">
+                    An Online Gems Store </span>
+                </div>
+                <div class="col-md-5 pad0" align="right">
+                 <%--   <div class="container-2">
+                        <a class="icon" onclick="SearchFunction()"><i class="fa fa-search">
+                            <asp:Button Style="display: none;" Text="" runat="server" ID="btnsrch" /></i></a>
+                        
+                        <asp:TextBox ID="search" placeholder="Search" runat="server"></asp:TextBox>
+                        <asp:Button runat="server" ID="Button1" OnClick="btnsrch_Click" />
+                    </div>--%>
+                </div>
+                <div class="col-md-1 cart" align="right">
+                      <span class="btn btn-danger borderraduce0" onclick="getRedirect();"  style="padding: 13px;"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart <asp:LinkButton ID="lblcount" class="badge" runat="server" Text="" Font-Underline="false"
+                            OnClick="lblcount_Click"></asp:LinkButton></span><%--</a>--%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="200">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand00 small_logo" href="#"> <%--<img src="images/smlogo.png"  alt="" />--%> </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" data-hover="dropdown" data-animations="fadeIn fadeInUp fadeInDown fadeInUp">
+     
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="Default.aspx">Home</a></li>
+       <%-- <li><a href="ProductPage.aspx">Products</a></li>--%>
+  <%--      <li><a href="AboutUs.aspx">About us</a></li>--%>
+   
+      </ul>
+        
+      <ul class="nav navbar-nav navbar-right">
+    <!--    <li><p class="navbar-text">Already have an account?</p></li>-->
+          <li> <a href="#"><asp:Label runat="server" ID="lblMPoints" Text=""  ></asp:Label></a></li>
+       <li class="dropdown" id="divmymenu" runat="server">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> My Account <span class="caret"></span></a>
+         
+         
+          <ul class="dropdown-menu" role="menu">
+             
+      <li><a href="MyOrderStatus.aspx">My Orders</a></li>
+<li><asp:LinkButton ID="linklogout" runat="server"  onclick="linklogout_Click" Visible="false">Logout</asp:LinkButton></li>
+          </ul>
+        </li>
+        <li class="dropdown" id="linkreg" runat="server">
+          <a href="frmLogin.aspx" class="dropdown-toggle"  style="background-color:#0e5aab; color:#FFFFFF" ><b>Login</b> </a>
+		
+        </li>
+
+      </ul>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+        <div class="container-fluid" style="position: fixed; bottom: 0px; text-align: center; width: 100%;">
+            <div class="row footer foot">
+                <span style="color: #999; font-size: 15px;" class="pull-right"></span>
+            </div>
+        </div>
+    <!-- Bootstrap Dropdown Hover JS -->
+    <script src="js/bootstrap-dropdownhover.min.js" type="text/javascript"></script>
+    </form>
+</body>
+</html>

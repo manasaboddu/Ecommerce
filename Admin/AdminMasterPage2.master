@@ -1,0 +1,286 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage2.master.cs"
+    Inherits="Admin_AdminMasterPage2" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Sales</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/etalage.css" type="text/css" media="all" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="../css/jquery.min.js" type="text/javascript"></script>
+    <script src="../css/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../asome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Dropdown Hover CSS -->
+    <link href="../css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap-dropdownhover.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/customstyles.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery.etalage.min.js" type="text/javascript"></script>
+
+
+
+    <link href="css/datepicker.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/datepicker.js"></script>
+    <script type="text/javascript" src="js/eye.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/layout.js?ver=1.0.2"></script>
+
+    <style type="text/css">
+        .modalBackground1
+        {
+            background-color: Gray;
+            filter: alpha(opacity=60);
+            opacity: 10;
+        }
+        .modalPopup
+        {
+            background-color: #FFFFFF;
+            border: 6px solid #A3CBEE;
+            border-radius: 1px;
+            padding: 0;
+            opacity: 10;
+        }
+        .modalPopup .header
+        {
+            background-color: #89B40E;
+            height: 30px;
+            color: White;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 1px;
+            border-top-right-radius: 1px;
+        }
+        .modalPopup .body
+        {
+            min-height: 50px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .modalPopup .footer
+        {
+            padding: 6px;
+        }
+        .modalPopup .yes, .modalPopup .no
+        {
+            height: 23px;
+            color: White;
+            line-height: 23px;
+            text-align: left;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 1px;
+        }
+        .modalPopup .yes
+        {
+            background-color: #014E9E;
+            border: 1px solid #0DA9D0;
+            top: 0px;
+            left: 13px;
+            position: relative;
+            width: 60px;
+        }
+        .modalPopup .no
+        {
+            background-color: #9F9F9F;
+            border: 1px solid #5C5C5C;
+            top: 0px;
+            left: 74px;
+            position: relative;
+        }
+        
+        .styled-button-8
+        {
+            background: #25A6E1;
+            background: -moz-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+            background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#25A6E1),color-stop(100%,#188BC0));
+            background: -webkit-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+            background: -o-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+            background: -ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+            background: linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+            padding: 8px 13px;
+            color: #fff;
+            font-family: Arial;
+            font-size: 17px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border: 1px solid #1A87B9;
+        }
+        
+        
+        
+        
+        .LoginControls1
+        {
+            width: 180px;
+            background-color: gray;
+            height: 35px;
+            border: 0px;
+        }
+        .watermarktext1
+        {
+            font-size: 12px;
+            color: white;
+            font-style: italic;
+            background-color: Gray;
+            border: 0px;
+            width: 180px;
+            height: 35px;
+        }
+        .HeaderText1
+        {
+            font-size: 35px;
+            color: #00367B;
+        }
+        
+        .ItemRow1
+        {
+            border: 1px solid #CECECE;
+            height: 30px;
+            font-family: Arial;
+            font-style: normal;
+            font-size: small;
+            padding-top: 2px;
+            padding-left:5px;
+        }
+        
+        .HeaderRow1
+        {
+            border: 1px solid #CECECE;
+            height: 30px;
+            background-color: #11A7A1;
+            color: white;
+            font-family: Arial;
+            font-size: medium;
+            text-align: center;
+        }
+        
+     
+     
+       #overLayBackground{
+     background-color: rgb(250, 250, 250);
+     opacity: 0.7; /* Safari, Opera */
+     -moz-opacity:0.25; /* FireFox */
+     filter: alpha(opacity=70); /* IE */
+     z-index: 200;
+     height: 100%;
+     width: 100%;
+     background-repeat:repeat;
+     position:fixed;
+     top: 0px;
+     left: 0px;
+     text-align:center; 
+         line-height: 240px; 
+    }
+
+    #overLayBackground>img {
+        position:absolute; bottom:0; top:0; left:0; right:0; margin:auto;
+    }
+    
+.modalBackground
+{
+	background-color:gray;
+    filter:alpha(opacity=70);
+    opacity:0.7; 
+}   
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Services>
+            <asp:ServiceReference Path="~/WebService.asmx" />
+        </Services>
+    </asp:ScriptManager>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="divHeader" runat= "server" class="col-md-12" style="background-color: #FFFFFF;">
+                <div class="col-md-4">
+     <%--               <img src="../images/shrisuryalogo.png" height="75" alt="" />--%>
+                      <img id="imgLogo" src="" runat="server" alt="" />
+                </div>
+        
+
+                     <div class="col-md-7 pad0" align="right">
+                     <span class="pull-left"><asp:Label ID="lblCustomerName" runat="server" Font-Size="15px"></asp:Label>
+             </span>
+                        <span class="pull-right"><asp:Label ID="lblUserName" runat="server"></asp:Label></span>
+                        </div>
+                <div class="col-md-7 pad0" align="right">
+         
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="200">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand00 small_logo" href="#"> <img src="../images/smlogo.png"  alt="" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" data-hover="dropdown" data-animations="fadeIn fadeInUp fadeInDown fadeInUp">
+     
+      <ul class="nav navbar-nav">
+          <li  class="active" ><a href="Product.aspx">Products</a>  </li>
+        <li><a href="ProductCategory.aspx">Product Categories</a></li>
+         <li><a href="ProductSpecificationCategory.aspx">Spec Category</a>  </li>      
+        <li><a href="SpecificationMasters.aspx">Spec Master</a></li>  
+       <%--<li><a href="Enquiries.aspx">Enquiries</a>   </li> --%>
+         <%--<li><a href="Home.aspx">Orders</a>   </li> --%>
+
+                                       
+      </ul>
+     
+     
+     
+      
+   
+      <ul class="nav navbar-nav navbar-right">
+    <!--    <li><p class="navbar-text">Already have an account?</p></li>-->
+       <li>
+          <asp:LinkButton ID="lnkbtnlogout" runat="server" Text="Sign Out" 
+                             onclick="lnkbtnlogout_Click"></asp:LinkButton>
+         </li>
+         </ul>          
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <div style="vertical-align: middle;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="container-fluid" style="position: fixed; bottom: 0px; text-align: center;
+        width: 100%;">
+        <div class="row footer foot">
+<%--            <span class="pull-left">© 2016. All Rights Reserved SHRRI SURYA GEMS</span> --%>
+            <span class="pull-left"><asp:Label ID="lblFooterText" runat="server"></asp:Label></span>
+<%--            <span class="pull-right"><a href="../ShippingInfo.aspx">Shipping Info </a>| <a href="../TermsConditions.aspx">
+                    Terms & Conditions</a> | <a href="../PrivacyPolicy.aspx">Privacy & Policy</a>--%>
+                                       
+            
+        </div>
+    </div>
+    <!-- Bootstrap Dropdown Hover JS -->
+    <script src="../js/bootstrap-dropdownhover.min.js" type="text/javascript"></script>
+    </form>
+</body>
+</html>

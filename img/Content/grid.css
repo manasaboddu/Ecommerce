@@ -1,0 +1,334 @@
+﻿BODY
+{
+	 
+	}
+	
+.test tr input
+ {
+    
+     margin-right:20px;
+     padding-right:10px;
+ }
+.grid 
+{ 
+	font-family:Arial;
+}
+.grid H2 
+{ 
+	margin:0; padding:0; 
+	color:#ffffff;
+	height:20px;
+	line-height:20px;
+	font-size:11px;
+}
+.grid .mid
+{
+	padding:3px 0px 0px 0px;
+}
+.grid .datatable
+{
+/* color:#666; */
+ color:#0066cc;
+   
+}        
+.grid .datatable TH
+{
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:0px;
+    padding:1px 2px;
+    color:steelblue;
+   
+}
+
+.grid .datatable TD
+{
+   font-size:13px;
+   padding:4px 4px;
+  
+   
+} 
+.TabularData
+{
+   font-size:12px;
+   padding:2px 2px;
+   border:solid 1px #bbd9ee;
+}     
+.textboxes1
+{
+	border: solid 1px  #bbd9ee; 
+	FONT-SIZE: 9pt; 
+	COLOR: steelblue; 
+	FONT-FAMILY: Arial; 
+	BACKGROUND-COLOR: #fbfbfb; 
+	TEXT-DECORATION: none; 
+	height: 18px;
+	width: 180px;
+}
+.textboxes1Multiline
+{
+	border: solid 1px  #bbd9ee; 
+	FONT-SIZE: 9pt; 
+	COLOR: steelblue; 
+	FONT-FAMILY: Arial; 
+	BACKGROUND-COLOR: #fbfbfb; 
+	TEXT-DECORATION: none; 
+	height: 50px;
+	width: 180px;
+}
+.ddl
+{
+	
+	FONT-SIZE: 9pt; 
+	COLOR: steelblue; 
+	FONT-FAMILY: Arial; 
+	BACKGROUND-COLOR: #fbfbfb; 
+	TEXT-DECORATION: none; 
+	vertical-align:middle; 
+}
+
+.textboxes3
+{
+	border: solid 2px  steelblue; 
+	FONT-SIZE: 9pt; 
+	COLOR: steelblue; 
+	FONT-FAMILY: Arial; 
+	BACKGROUND-COLOR:ghostwhite; 
+	TEXT-DECORATION: none; 
+	height: 17px;
+}
+
+
+.hlink
+{
+	font-family: Arial;
+	color:steelblue;
+	font-size:11px;
+	font-weight:bold;
+} 
+.linkb
+{
+	font-family: Arial;
+	color:steelblue;
+	font-size:11px;
+	font-weight:bold;
+}   
+
+
+.MsgErrorLabel
+{
+	 font-family:Arial;
+	 font-size:11px;
+	 color:red;    
+     font-weight:bold; 	
+}
+.MsgLabel
+{
+	 font-family:Arial;
+	 font-size:11px;
+	 color:#0066cc;
+     font-weight:bold; 	
+}
+.MsgLabelbold
+{
+	 font-family:Arial;
+	 font-size:13px;
+	 color:steelblue;    
+     font-weight:bold; 	
+}
+.Msghint
+{
+	 font-family:Arial;
+	 font-size:11px;
+	 color:maroon;    
+     font-weight:normal; 	
+}
+.textboxes2
+{
+	border: solid 1px  #bbd9ee; 
+	FONT-SIZE: 9pt; 
+	COLOR: DarkGray; 
+	FONT-FAMILY: Arial; 
+	TEXT-DECORATION: none; 
+	height: 15px;
+}
+.Msgetalic
+{
+	  
+	 font-family:Arial;
+	 font-size:11px;
+	 color:maroon;   
+	 font-weight:normal; 
+     background-color:whitesmoke;
+	 font-style:italic; 	
+}
+
+.Msg
+{
+	  
+	 font-family:Arial;
+	 font-size:12px;
+	 color:maroon;   
+	 font-weight:normal; 
+     background-color:whitesmoke;
+	 	
+}
+.modalBackgroundSimple
+        {
+	        filter:alpha(opacity=60);
+	        opacity:0.60;         
+        }
+.modalBackgroundGray 
+        {
+	        background-color:Gray;
+	        filter:alpha(opacity=60);
+	        opacity:0.60;         
+        }
+.modalBackground 
+        {
+	        background-color:Gray;
+	        filter:alpha(opacity=60);
+	        opacity:0.60;         
+        }
+ .updateProgressMessage
+        {
+            margin:3px; 
+            font-family:Arial; 
+            font-size:small; 
+            vertical-align: middle;
+        }
+        
+ .updateProgress
+        {
+            border-width:1px; 
+            border-style:solid; 
+            background-color:#FFFFFF; 
+            position:absolute; 
+            width:130px; 
+            height:50px;    
+  
+        }
+.footer
+ {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #2572A0; FONT-FAMILY: Arial; TEXT-ALIGN:justify; TEXT-DECORATION: none; 
+}
+.footer_2
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #575757; FONT-FAMILY: Arial; TEXT-ALIGN:Center; TEXT-DECORATION: none; 
+}
+
+.style1 
+{ 
+	color: #2572a0;
+	font-family:Arial;
+    font-size:12px; 
+} 
+
+
+
+
+
+.frame
+{
+	position:absolute;
+    font-family:Arial;
+    font-size:small;  
+    padding:2px 3px;
+    width:350px;
+}
+
+.overlay
+{  
+    border:solid 1px #808080;
+    border-width:1px 1px;
+} 
+
+.underlay
+{
+    position:absolute;
+    background-color:#000;
+    bottom:-1px;
+    filter:alpha(opacity=12);
+    left:-1px;
+    right:-1px;
+    top:3px;
+    z-index:-1;
+}
+
+.header
+{
+    cursor:move; /* Because the DragPanelExtender doesn't do this for me ;( */
+    background: url(../Images/sprite.png) repeat-x 0px -200px;	
+    color:#0066cc;   
+	font-weight:bold; 		
+    border-bottom:solid 1px #ccc;
+    padding: 3px 10px;
+} 
+
+.header .msg
+{
+    font-weight: bold;
+}         
+
+.updating, .body
+{
+    background-color:aliceblue;
+    padding:10px;
+    font-size:11px;
+	color:#0066cc; 
+    font-family:Arial;
+}
+
+.updating
+{
+	color:#808080;
+	background:#fff url(../Images/activity.gif) no-repeat center;
+} 
+
+
+
+/*.close
+{
+    right: 7px;	
+    background: url(../Images/sprite.png) no-repeat 0px -300px;	
+    width: 25px;	
+    cursor: pointer;	
+    position: absolute;	
+    top: 7px;	
+    height: 15px;
+}*/
+
+.close
+{
+    right: 5px;	
+    background: url(../Images/sprite_close.png) no-repeat 0px 0px;	
+    width: 63px;	
+    cursor: pointer;	
+    position: absolute;	
+    top: 3px;	
+    height: 23px;
+}  
+ 
+.close2
+{
+    right: 10px;	
+    background: url(../Images/sprite_close.png) no-repeat 0px 0px;	
+    width: 63px;	
+    cursor: pointer;	
+    position: absolute;	
+    top: 10px;	
+    height: 23px;
+}  
+
+.overlay2
+{  
+    background:url(../Images/pop-up_border.png);
+    padding:10px;
+    border-radius:5px;
+} 
+    
+    .radio
+{
+	border: solid 0px  #014569; 
+	background-color:aliceblue;
+}     
